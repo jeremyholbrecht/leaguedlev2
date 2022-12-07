@@ -6,8 +6,8 @@ server:
 spring:
   datasource:
     password:
-    url: jdbc:postgresql://localhost:5432/leaguedle
-    username:
+    url: jdbc:postgresql://localhost:5432/leaguedlev2
+    username: postgres
   jpa:
     hibernate:
       ddl-auto: create-drop
