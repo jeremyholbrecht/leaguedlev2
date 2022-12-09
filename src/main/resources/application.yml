@@ -15,7 +15,9 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
     show-sql: true
-
+  thymeleaf:
+      cache: false # Allow Thymeleaf templates to be reloaded at runtime
+      prefix: /WEB-INF/templates/
   mail:
     host: localhost
     port: 1025
