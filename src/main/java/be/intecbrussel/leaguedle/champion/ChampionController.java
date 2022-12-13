@@ -16,10 +16,10 @@ public class ChampionController {
     }
 
     // all champions
-    @GetMapping("/quote")
+    @GetMapping("/champions")
     public String getAllChampions(Model model){
         model.addAttribute("champion", championService.getAllChampions());
-        return "quote";
+        return "champions";
     }
 
 }

@@ -13,7 +13,7 @@ public class ChampionConfig {
     CommandLineRunner commandLineRunner(ChampionRepository championRepository){
         return args -> {
             Champion aatrox = new Champion(
-                    "Aatrox",
+                    ChampionName.Aatrox,
                     ChampionGender.Male,
                     ChampionPosition.Top,
                     "Darkin",
@@ -24,7 +24,7 @@ public class ChampionConfig {
                     2013);
 
             Champion ahri = new Champion(
-                    "Ahri",
+                    ChampionName.Ahri,
                     ChampionGender.Female,
                     ChampionPosition.Mid,
                     "Vastayan",

@@ -15,7 +15,7 @@ public class ChampionService {
         this.championRepository = championRepository;
     }
 
-    // return list of all champions
+    // list of all champions
     public List<Champion> getAllChampions(){
         return championRepository.findAll();
     }

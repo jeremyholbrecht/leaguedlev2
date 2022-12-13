@@ -23,7 +23,8 @@ public class Champion {
             generator = "champion_sequence"
     )
     private Long championId;
-    private String championName;
+    @Enumerated(EnumType.STRING)
+    private ChampionName championName;
     @Enumerated(EnumType.STRING)
     private ChampionGender championGender;
     @Enumerated(EnumType.STRING)
@@ -37,7 +38,7 @@ public class Champion {
     private String championQuote;
     private Integer championReleaseYear;
 
-    public Champion(String championName, ChampionGender championGender, ChampionPosition championPosition, String championSpecies,
+    public Champion(ChampionName championName, ChampionGender championGender, ChampionPosition championPosition, String championSpecies,
                     ChampionRescourceType championResourceType, ChampionRangeType championRangeType, String championRegion, String championQuote
             ,Integer championReleaseYear) {
         this.championName = championName;
