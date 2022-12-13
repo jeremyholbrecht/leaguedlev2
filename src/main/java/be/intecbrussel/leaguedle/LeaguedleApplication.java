@@ -8,5 +8,4 @@ public class LeaguedleApplication {
     public static void main(String[] args) {
         SpringApplication.run(LeaguedleApplication.class, args);
     }
-
 }
