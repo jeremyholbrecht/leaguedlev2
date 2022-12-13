@@ -14,22 +14,22 @@ public class ChampionConfig {
         return args -> {
             Champion aatrox = new Champion(
                     "Aatrox",
-                    ChampionGender.MALE,
-                    ChampionPosition.TOP,
+                    ChampionGender.Male,
+                    ChampionPosition.Top,
                     "Darkin",
-                     "Manaless",
-                    "Melee",
+                    ChampionRescourceType.Maneless,
+                    ChampionRangeType.Melee,
                     "Runeterra",
                     "lolol",
                     2013);
 
             Champion ahri = new Champion(
                     "Ahri",
-                    ChampionGender.FEMALE,
-                    ChampionPosition.TOP,
+                    ChampionGender.Female,
+                    ChampionPosition.Mid,
                     "Vastayan",
-                    "Mana",
-                    "Ranged",
+                    ChampionRescourceType.Mana,
+                    ChampionRangeType.Ranged,
                     "Iona",
                     "charmed are you",
                     2011

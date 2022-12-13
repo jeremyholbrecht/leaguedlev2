@@ -5,7 +5,6 @@ import javax.persistence.*;
 
 
 @Getter
-@Setter
 @EqualsAndHashCode
 @NoArgsConstructor
 @ToString
@@ -30,20 +29,22 @@ public class Champion {
     @Enumerated(EnumType.STRING)
     private ChampionPosition championPosition;
     private String championSpecies;
-    private String championResource;
-    private String championRangeType;
+    @Enumerated(EnumType.STRING)
+    private ChampionRescourceType championResourceType;
+    @Enumerated(EnumType.STRING)
+    private ChampionRangeType championRangeType;
     private String championRegion;
     private String championQuote;
     private Integer championReleaseYear;
 
     public Champion(String championName, ChampionGender championGender, ChampionPosition championPosition, String championSpecies,
-                    String championResource, String championRangeType, String championRegion, String championQuote
+                    ChampionRescourceType championResourceType, ChampionRangeType championRangeType, String championRegion, String championQuote
             ,Integer championReleaseYear) {
         this.championName = championName;
         this.championGender = championGender;
         this.championPosition = championPosition;
         this.championSpecies = championSpecies;
-        this.championResource = championResource;
+        this.championResourceType = championResourceType;
         this.championRangeType = championRangeType;
         this.championRegion = championRegion;
         this.championQuote = championQuote;

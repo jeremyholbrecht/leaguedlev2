@@ -9,6 +9,8 @@ import javax.persistence.*;
 import java.util.Collection;
 import java.util.Collections;
 
+@Getter
+@Setter
 @EqualsAndHashCode
 @NoArgsConstructor
 @ToString
@@ -26,7 +28,7 @@ public class User implements UserDetails {
             strategy = GenerationType.SEQUENCE,
             generator = "users_sequence"
     )
-    public Long userId;
+    private Long userId;
     private String userName;
     private String userEmail;
     private String userPassword;
@@ -40,58 +42,6 @@ public class User implements UserDetails {
         this.userEmail = userEmail;
         this.userPassword = userPassword;
         this.userRole = userRole;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getUserEmail() {
-        return userEmail;
-    }
-
-    public void setUserEmail(String userEmail) {
-        this.userEmail = userEmail;
-    }
-
-    public String getUserPassword() {
-        return userPassword;
-    }
-
-    public void setUserPassword(String userPassword) {
-        this.userPassword = userPassword;
-    }
-
-    public UserRole getUserRole() {
-        return userRole;
-    }
-
-    public void setUserRole(UserRole userRole) {
-        this.userRole = userRole;
-    }
-
-    public Boolean getLocked() {
-        return locked;
-    }
-
-    public void setLocked(Boolean locked) {
-        this.locked = locked;
-    }
-
-    public Boolean getEnabled() {
-        return enabled;
-    }
-
-    public void setEnabled(Boolean enabled) {
-        this.enabled = enabled;
     }
 
     @Override

@@ -1,10 +1,10 @@
 package be.intecbrussel.leaguedle.champion;
 
 public enum ChampionPosition {
-    TOP,
-    JUNGLE,
-    MID,
-    BOTTOM,
-    SUPPORT
+    Top,
+    Jungle,
+    Mid,
+    Bottom,
+    Support
 
 }
