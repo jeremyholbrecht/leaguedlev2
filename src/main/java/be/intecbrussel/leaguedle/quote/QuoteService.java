@@ -23,4 +23,5 @@ public class QuoteService {
         int position = random.nextInt(quotes.size());
         return quotes.get(position);
     }
+
 }

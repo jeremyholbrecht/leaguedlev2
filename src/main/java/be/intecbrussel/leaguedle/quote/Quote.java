@@ -35,4 +35,5 @@ public class Quote {
         this.quote = quote;
         this.championName = championName;
     }
+
 }

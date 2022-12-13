@@ -11,5 +11,11 @@
 <div th:each="q:${quote}">
     <p th:text="${q.quote}"></p>
 </div>
+
+<form role="form" method="post" th:action="@{/quote}" th:object="${player}">
+    <h3>Username</h3>
+    <input type="text" th:field="*{userName}"/>
+    <button type="submit" value="Submit">Submit</button>
+</form>
 </body>
 </html>
