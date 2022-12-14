@@ -37,6 +37,7 @@ public class User implements UserDetails {
     private Boolean locked = false;
     private Boolean enabled = false;
 
+
     public User(String userName, String userEmail, String userPassword, UserRole userRole) {
         this.userName = userName;
         this.userEmail = userEmail;

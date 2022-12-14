@@ -12,10 +12,12 @@
     <p th:text="${q.quote}"></p>
 </div>
 
-<form role="form" method="post" th:action="@{/quote}" th:object="${player}">
-    <h3>Username</h3>
-    <input type="text" th:field="*{userName}"/>
+<form role="form" method="post" th:action="@{/quote}" th:object="${guess}">
+    <input type="text" th:field="*{currentGuess}"/>
     <button type="submit" value="Submit">Submit</button>
 </form>
+
+<div th:each="g:${guesses}">
+    <p th:text="${g.currentGuess}"></p>
 </body>
 </html>
