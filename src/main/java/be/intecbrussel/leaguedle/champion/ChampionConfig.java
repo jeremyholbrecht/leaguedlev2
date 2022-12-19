@@ -16,27 +16,66 @@ public class ChampionConfig {
                     ChampionName.Aatrox,
                     ChampionGender.Male,
                     ChampionPosition.Top,
-                    "Darkin",
+                    ChampionSpecies.Darkin,
                     ChampionRescourceType.Maneless,
                     ChampionRangeType.Melee,
-                    "Runeterra",
-                    "lolol",
+                    ChampionRegion.Shurima,
                     2013);
 
             Champion ahri = new Champion(
                     ChampionName.Ahri,
                     ChampionGender.Female,
                     ChampionPosition.Mid,
-                    "Vastayan",
+                    ChampionSpecies.Vastayan,
                     ChampionRescourceType.Mana,
                     ChampionRangeType.Ranged,
-                    "Iona",
-                    "charmed are you",
+                    ChampionRegion.Ionia,
                     2011
             );
 
+            Champion akali = new Champion(
+                    ChampionName.Akali,
+                    ChampionGender.Female,
+                    ChampionPosition.Mid,
+                    ChampionSpecies.Human,
+                    ChampionRescourceType.Energy,
+                    ChampionRangeType.Melee,
+                    ChampionRegion.Ionia,
+                    2010
+            );
+
+            Champion akshan = new Champion(
+                    ChampionName.Akshan,
+                    ChampionGender.Male,
+                    ChampionPosition.Mid,
+                    ChampionSpecies.Human,
+                    ChampionRescourceType.Mana,
+                    ChampionRangeType.Ranged,
+                    ChampionRegion.Shurima,
+                    2021
+            );
+
+            Champion alistar = new Champion(
+                    ChampionName.Alistar,
+                    ChampionGender.Male,
+                    ChampionPosition.Support,
+                    ChampionSpecies.Minotaur,
+                    ChampionRescourceType.Mana,
+                    ChampionRangeType.Melee,
+                    ChampionRegion.Runeterra,
+                    2021
+            );
+
+
+
             championRepository.saveAll(
-                    List.of(aatrox, ahri)
+                    List.of(
+                            aatrox,
+                            ahri,
+                            akali,
+                            akshan,
+                            alistar
+                            )
             );
         };
     }

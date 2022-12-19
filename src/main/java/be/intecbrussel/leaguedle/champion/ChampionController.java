@@ -22,4 +22,12 @@ public class ChampionController {
         return "champions";
     }
 
+    @GetMapping("/championsByNameDesc")
+    public String championsByNameDescPage(Model model){
+        model.addAttribute("champion", championService.orderByNameDescending());
+        return "championsByNameDesc";
+    }
+
+
+
 }

@@ -25,9 +25,10 @@ public class Guess {
             generator = "guess_sequence"
     )
     private Long guessId;
-    private ChampionName guessChampionName;
+    @Enumerated(EnumType.STRING)
+    private ChampionName guessedChampionName;
 
-    public Guess(ChampionName currentGuess) {
-        this.guessChampionName = getGuessChampionName();
+    public Guess(ChampionName guessedChampionName) {
+        this.guessedChampionName = getGuessedChampionName();
     }
 }

@@ -29,18 +29,19 @@ public class Champion {
     private ChampionGender championGender;
     @Enumerated(EnumType.STRING)
     private ChampionPosition championPosition;
-    private String championSpecies;
+    @Enumerated(EnumType.STRING)
+    private ChampionSpecies championSpecies;
     @Enumerated(EnumType.STRING)
     private ChampionRescourceType championResourceType;
     @Enumerated(EnumType.STRING)
     private ChampionRangeType championRangeType;
-    private String championRegion;
+    @Enumerated(EnumType.STRING)
+    private ChampionRegion championRegion;
     private String championQuote;
     private Integer championReleaseYear;
 
-    public Champion(ChampionName championName, ChampionGender championGender, ChampionPosition championPosition, String championSpecies,
-                    ChampionRescourceType championResourceType, ChampionRangeType championRangeType, String championRegion, String championQuote
-            ,Integer championReleaseYear) {
+    public Champion(ChampionName championName, ChampionGender championGender, ChampionPosition championPosition, ChampionSpecies championSpecies,
+                    ChampionRescourceType championResourceType, ChampionRangeType championRangeType, ChampionRegion championRegion,Integer championReleaseYear) {
         this.championName = championName;
         this.championGender = championGender;
         this.championPosition = championPosition;
@@ -48,7 +49,6 @@ public class Champion {
         this.championResourceType = championResourceType;
         this.championRangeType = championRangeType;
         this.championRegion = championRegion;
-        this.championQuote = championQuote;
         this.championReleaseYear = championReleaseYear;
     }
 

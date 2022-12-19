@@ -18,12 +18,18 @@ public class QuoteConfig {
                     ChampionName.Aatrox
             );
 
+            Quote aatroxQuote2 = new Quote(
+                    "Am I the abyss or did I gaze into it?",
+                    ChampionName.Aatrox
+            );
+
             Quote ahriQuote1 = new Quote(
                     "No one will stand in my way.",
                     ChampionName.Ahri
             );
 
-            quoteRepository.saveAll(List.of(aatroxQuote1, ahriQuote1));
+
+            quoteRepository.saveAll(List.of(aatroxQuote1,aatroxQuote2 ,ahriQuote1));
         };
     }
 }
