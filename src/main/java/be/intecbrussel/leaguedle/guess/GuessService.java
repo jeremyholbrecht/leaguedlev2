@@ -30,4 +30,9 @@ public class GuessService {
     public Guess getGuessById(Long guessId){
         return guessRepository.findById(guessId).orElse(null);
     }
+
+    // delete
+    public void deleteGuesses(){
+        guessRepository.deleteAll();
+    }
 }

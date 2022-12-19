@@ -36,6 +36,14 @@ public class ChampionService {
         return champions;
     }
 
+    // Male
+    public List<Champion> maleChampions(){
+        List<Champion> champions = championRepository.findAll();
+        champions = champions.stream().filter(champion -> champion.getChampionGender()
+                .equals(ChampionGender.Male)).collect(Collectors.toList());
+        return champions;
+    }
+
 
 
 

@@ -28,6 +28,12 @@ public class ChampionController {
         return "championsByNameDesc";
     }
 
+    @GetMapping("/maleChampions")
+    public String maleChampions(Model model){
+        model.addAttribute("champion", championService.maleChampions());
+        return "maleChampions";
+    }
+
 
 
 }

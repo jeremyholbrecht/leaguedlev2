@@ -4,6 +4,7 @@ import be.intecbrussel.leaguedle.champion.Champion;
 import be.intecbrussel.leaguedle.champion.ChampionName;
 import be.intecbrussel.leaguedle.guess.Guess;
 import be.intecbrussel.leaguedle.guess.GuessService;
+import org.hibernate.mapping.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.servlet.http.HttpSession;
 import java.net.http.HttpRequest;
+import java.util.Collections;
 import java.util.List;
 
 @Controller
@@ -42,15 +44,19 @@ public class QuoteController {
         model.addAttribute("guesses", guesses);
         if(httpSession.getAttribute("guessed")!= null){
             ChampionName guessedChampionName =  guesses.get(guesses.size()-1).getGuessedChampionName();
-            System.out.println("quote " + randomQuoteChampionName);
-            System.out.println("your guess" + guessedChampionName);
+            System.out.println("The right answer is: " + randomQuoteChampionName);
+            System.out.println("Your guess is: " + guessedChampionName);
+
             if (randomQuoteChampionName == guessedChampionName){
                 System.out.println("you are correct");
                 httpSession.setAttribute("guessed", null);
                 httpSession.setAttribute("quote", null);
+                guesses.clear();
+                guessService.deleteGuesses();
             }
             else{
                 System.out.println("you are not correct");
+
             }
 
         }

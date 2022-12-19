@@ -29,7 +29,10 @@ public class QuoteConfig {
             );
 
 
-            quoteRepository.saveAll(List.of(aatroxQuote1,aatroxQuote2 ,ahriQuote1));
+            quoteRepository.saveAll(List.of(
+                    aatroxQuote1,
+                    aatroxQuote2 ,
+                    ahriQuote1));
         };
     }
 }
