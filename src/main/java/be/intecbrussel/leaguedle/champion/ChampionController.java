@@ -15,6 +15,12 @@ public class ChampionController {
         this.championService = championService;
     }
 
+    @GetMapping("/index")
+    public String indexPage(){
+        return "index";
+    }
+
+
     // all champions
     @GetMapping("/champions")
     public String getAllChampions(Model model){
@@ -22,16 +28,25 @@ public class ChampionController {
         return "champions";
     }
 
+    // name desc
     @GetMapping("/championsByNameDesc")
     public String championsByNameDescPage(Model model){
         model.addAttribute("champion", championService.orderByNameDescending());
         return "championsByNameDesc";
     }
 
+    // male
     @GetMapping("/maleChampions")
     public String maleChampions(Model model){
-        model.addAttribute("champion", championService.maleChampions());
+        model.addAttribute("champion", championService.getMaleChampions());
         return "maleChampions";
+    }
+
+    // female
+    @GetMapping("femaleChampions")
+    public String femaleChampions(Model model){
+        model.addAttribute("champion", championService.getFemaleChampions());
+        return "femaleChampions";
     }
 
 
