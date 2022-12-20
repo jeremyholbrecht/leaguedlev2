@@ -110,6 +110,50 @@ public class ChampionConfig {
                     2019
             );
 
+            Champion ashe = new Champion(
+                    ChampionName.Ashe,
+                    ChampionGender.Female,
+                    ChampionPosition.Bottom,
+                    ChampionSpecies.Human,
+                    ChampionRescourceType.Mana,
+                    ChampionRangeType.Ranged,
+                    ChampionRegion.TheFreljord,
+                    2009
+            );
+
+            Champion aurelionSol = new Champion(
+                    ChampionName.AurelionSol,
+                    ChampionGender.Male,
+                    ChampionPosition.Mid,
+                    ChampionSpecies.Dragon,
+                    ChampionRescourceType.Mana,
+                    ChampionRangeType.Ranged,
+                    ChampionRegion.Targon,
+                    2016
+            );
+
+            Champion azir = new Champion(
+                    ChampionName.Azir,
+                    ChampionGender.Male,
+                    ChampionPosition.Mid,
+                    ChampionSpecies.GodWarrior,
+                    ChampionRescourceType.Mana,
+                    ChampionRangeType.Ranged,
+                    ChampionRegion.Shurima,
+                    2014
+            );
+
+            Champion bard = new Champion(
+                    ChampionName.Bard,
+                    ChampionGender.Male,
+                    ChampionPosition.Support,
+                    ChampionSpecies.Celestial,
+                    ChampionRescourceType.Mana,
+                    ChampionRangeType.Ranged,
+                    ChampionRegion.Runeterra,
+                    2015
+            );
+
 
             championRepository.saveAll(
                     List.of(
@@ -121,7 +165,11 @@ public class ChampionConfig {
                             amumu,
                             anivia,
                             annie,
-                            aphelios
+                            aphelios,
+                            ashe,
+                            aurelionSol,
+                            azir,
+                            bard
                             )
             );
         };

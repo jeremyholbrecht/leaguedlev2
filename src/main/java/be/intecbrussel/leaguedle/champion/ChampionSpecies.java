@@ -12,5 +12,6 @@ public enum ChampionSpecies {
     Voidborn,
     Ascended,
     Darkin,
-    Minotaur
+    Minotaur,
+    GodWarrior
 }

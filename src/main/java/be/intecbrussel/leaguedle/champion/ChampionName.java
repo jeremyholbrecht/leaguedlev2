@@ -13,6 +13,7 @@ public enum ChampionName {
     Ashe,
     AurelionSol,
     Azir,
+    Bard,
     Belveth,
     BlitzCrank,
     Brand,
