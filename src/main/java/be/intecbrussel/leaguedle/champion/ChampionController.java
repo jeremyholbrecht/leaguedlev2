@@ -49,6 +49,38 @@ public class ChampionController {
         return "femaleChampions";
     }
 
+    // top
+    @GetMapping("topChampions")
+    public String topChampions(Model model){
+        model.addAttribute("champion", championService.getTopChampions());
+        return "topChampions";
+    }
 
+    // jungle
+    @GetMapping("jungleChampions")
+    public String jungleChampions(Model model){
+        model.addAttribute("champion", championService.getJungleChampions());
+        return "jungleChampions";
+    }
 
+    // mid
+    @GetMapping("midChampions")
+    public String midChampions(Model model){
+        model.addAttribute("champion", championService.getMidChampions());
+        return "midChampions";
+    }
+
+    // bottom
+    @GetMapping("bottomChampions")
+    public String bottomChampions(Model model){
+        model.addAttribute("champion", championService.getBottomChampions());
+        return "bottomChampions";
+    }
+
+    // support
+    @GetMapping("supportChampions")
+    public String supportChampions(Model model){
+        model.addAttribute("champion", championService.getSupportChampions());
+        return "supportChampions";
+    }
 }

@@ -17,26 +17,26 @@ public class ChampionService {
         this.championRepository = championRepository;
     }
 
-    // list of all champions
+    // all champions
     public List<Champion> getAllChampions(){
         return championRepository.findAll();
     }
 
-    // by name ascending
+    // name ascending
     public List<Champion> orderByNameAscending(){
         List<Champion> champions = championRepository.findAll();
         champions = champions.stream().sorted(Comparator.comparing(Champion::getChampionName)).collect(Collectors.toList());
         return champions;
     }
 
-    // by name descending
+    // name descending
     public List<Champion> orderByNameDescending(){
         List<Champion> champions = championRepository.findAll();
         champions = champions.stream().sorted(Comparator.comparing(Champion::getChampionName).reversed()).collect(Collectors.toList());
         return champions;
     }
 
-    // Male
+    // male
     public List<Champion> getMaleChampions(){
         List<Champion> champions = championRepository.findAll();
         champions = champions.stream().filter(champion -> champion.getChampionGender()
@@ -44,7 +44,7 @@ public class ChampionService {
         return champions;
     }
 
-    // Female
+    // female
     public List <Champion> getFemaleChampions(){
         List<Champion> champions = championRepository.findAll();
         champions = champions.stream().filter(champion -> champion.getChampionGender().
@@ -53,6 +53,141 @@ public class ChampionService {
     }
 
 
+    // top
+    public List <Champion> getTopChampions(){
+        List <Champion> champions = championRepository.findAll();
+        champions = champions.stream().filter(champion -> champion.getChampionPosition().
+                equals(ChampionPosition.Top)).collect(Collectors.toList());
+        return champions;
+    }
+
+    // jungle
+    public List <Champion> getJungleChampions(){
+        List <Champion> champions = championRepository.findAll();
+        champions = champions.stream().filter(champion -> champion.getChampionPosition().
+                equals(ChampionPosition.Jungle)).collect(Collectors.toList());
+        return champions;
+    }
+
+    // mid
+    public List <Champion> getMidChampions(){
+        List <Champion> champions = championRepository.findAll();
+        champions = champions.stream().filter(champion -> champion.getChampionPosition().
+                equals(ChampionPosition.Mid)).collect(Collectors.toList());
+        return champions;
+    }
+
+    // bottom
+    public List <Champion> getBottomChampions(){
+        List <Champion> champions = championRepository.findAll();
+        champions = champions.stream().filter(champion -> champion.getChampionPosition().
+                equals(ChampionPosition.Bottom)).collect(Collectors.toList());
+        return champions;
+    }
+
+    //support
+    public List <Champion> getSupportChampions(){
+        List <Champion> champions = championRepository.findAll();
+        champions = champions.stream().filter(champion -> champion.getChampionPosition().
+                equals(ChampionPosition.Support)).collect(Collectors.toList());
+        return champions;
+    }
+
+    // human
+    public List <Champion> getHumanChampions(){
+        List <Champion> champions = championRepository.findAll();
+        champions = champions.stream().filter(champion -> champion.getChampionSpecies().
+                equals(ChampionSpecies.Human)).collect(Collectors.toList());
+        return champions;
+    }
+
+    // yordle
+    public List <Champion> getYordleChampions(){
+        List <Champion> champions = championRepository.findAll();
+        champions = champions.stream().filter(champion -> champion.getChampionSpecies().
+                equals(ChampionSpecies.Yordle)).collect(Collectors.toList());
+        return champions;
+    }
+
+    // vastayan
+    public List <Champion> getVastayanChampions(){
+        List <Champion> champions = championRepository.findAll();
+        champions = champions.stream().filter(champion -> champion.getChampionSpecies().
+                equals(ChampionSpecies.Vastayan)).collect(Collectors.toList());
+        return champions;
+    }
+
+    // undead
+    public List <Champion> getUndeadChampions(){
+        List <Champion> champions = championRepository.findAll();
+        champions = champions.stream().filter(champion -> champion.getChampionSpecies().
+                equals(ChampionSpecies.Undead)).collect(Collectors.toList());
+        return champions;
+    }
+
+    // spirit
+    public List <Champion> getSpiritChampions(){
+        List <Champion> champions = championRepository.findAll();
+        champions = champions.stream().filter(champion -> champion.getChampionSpecies().
+                equals(ChampionSpecies.Undead)).collect(Collectors.toList());
+        return champions;
+    }
+
+    // dragon
+    public List <Champion> getDragonChampions(){
+        List <Champion> champions = championRepository.findAll();
+        champions = champions.stream().filter(champion -> champion.getChampionSpecies().
+                equals(ChampionSpecies.Dragon)).collect(Collectors.toList());
+        return champions;
+    }
+
+    //  brackern
+    public List <Champion> getbrackernChampions(){
+        List <Champion> champions = championRepository.findAll();
+        champions = champions.stream().filter(champion -> champion.getChampionSpecies().
+                equals(ChampionSpecies.Brackern)).collect(Collectors.toList());
+        return champions;
+    }
+
+    // celestial
+    public List <Champion> getCelestialChampions(){
+        List <Champion> champions = championRepository.findAll();
+        champions = champions.stream().filter(champion -> champion.getChampionSpecies().
+                equals(ChampionSpecies.Celestial)).collect(Collectors.toList());
+        return champions;
+    }
+
+    // voidborn
+    public List <Champion> getVoidbornChampions(){
+        List <Champion> champions = championRepository.findAll();
+        champions = champions.stream().filter(champion -> champion.getChampionSpecies().
+                equals(ChampionSpecies.Voidborn)).collect(Collectors.toList());
+        return champions;
+    }
+
+    // ascended
+    public List <Champion> getAscendedChampions(){
+        List <Champion> champions = championRepository.findAll();
+        champions = champions.stream().filter(champion -> champion.getChampionSpecies().
+                equals(ChampionSpecies.Ascended)).collect(Collectors.toList());
+        return champions;
+    }
+
+    // darkin
+    public List <Champion> getDarkinChampions(){
+        List <Champion> champions = championRepository.findAll();
+        champions = champions.stream().filter(champion -> champion.getChampionSpecies().
+                equals(ChampionSpecies.Darkin)).collect(Collectors.toList());
+        return champions;
+    }
+
+    // minotaur
+    public List <Champion> getMinotaurChampions(){
+        List <Champion> champions = championRepository.findAll();
+        champions = champions.stream().filter(champion -> champion.getChampionSpecies().
+                equals(ChampionSpecies.Minotaur)).collect(Collectors.toList());
+        return champions;
+    }
 
 
 

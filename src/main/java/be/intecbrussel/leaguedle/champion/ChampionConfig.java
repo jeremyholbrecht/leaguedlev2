@@ -66,6 +66,49 @@ public class ChampionConfig {
                     2021
             );
 
+            Champion amumu = new Champion(
+                    ChampionName.Amumu,
+                    ChampionGender.Male,
+                    ChampionPosition.Jungle,
+                    ChampionSpecies.Yordle,
+                    ChampionRescourceType.Mana,
+                    ChampionRangeType.Melee,
+                    ChampionRegion.Shurima,
+                    2009
+            );
+
+            Champion anivia = new Champion(
+                    ChampionName.Anivia,
+                    ChampionGender.Female,
+                    ChampionPosition.Mid,
+                    ChampionSpecies.Spirit,
+                    ChampionRescourceType.Mana,
+                    ChampionRangeType.Ranged,
+                    ChampionRegion.TheFreljord,
+                    2009
+            );
+
+            Champion annie = new Champion(
+                    ChampionName.Annie,
+                    ChampionGender.Female,
+                    ChampionPosition.Mid,
+                    ChampionSpecies.Human,
+                    ChampionRescourceType.Mana,
+                    ChampionRangeType.Ranged,
+                    ChampionRegion.Noxus,
+                    2009
+            );
+
+            Champion aphelios = new Champion(
+                    ChampionName.Aphelios,
+                    ChampionGender.Male,
+                    ChampionPosition.Bottom,
+                    ChampionSpecies.Human,
+                    ChampionRescourceType.Mana,
+                    ChampionRangeType.Ranged,
+                    ChampionRegion.Targon,
+                    2019
+            );
 
 
             championRepository.saveAll(
@@ -74,7 +117,11 @@ public class ChampionConfig {
                             ahri,
                             akali,
                             akshan,
-                            alistar
+                            alistar,
+                            amumu,
+                            anivia,
+                            annie,
+                            aphelios
                             )
             );
         };
